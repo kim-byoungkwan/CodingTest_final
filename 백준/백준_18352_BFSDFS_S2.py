@@ -1,25 +1,47 @@
-N,M,K,X = map(int,input().split())
+from collections import deque
 
-matrix = [[0]*(N+1) for _ in range(N+1)]
+import sys
+
+N,M,K,X = map(int,sys.stdin.readline().split())
+
+adjacency_list = [[] for _ in range(N+1)]
+
 
 for i in range(M):
 
-    x,y = map(int,input().split())
+    a,b = map(int,sys.stdin.readline().split())
 
-    matrix[x][y] = 1
+    adjacency_list[a].append(b)
 
-visited = [0]*(N+1)
 
-def dfs(X):
+visited = [-1]*(N+1)
 
-    visited[X] = 1
 
-    print(X,end=' ')
+queue = deque([X])
 
-    for i in range(1,N+1):
+visited[X] = 0
 
-        if (visited[i] == 0 and matrix[X][i] == 1):
+while queue:
 
-            dfs(i)
+    current = queue.popleft()
 
-dfs(X)
+    for i in adjacency_list[current]:
+
+        if visited[i] == -1:
+
+            visited[i] = visited[current] + 1
+
+            queue.append(i)
+
+
+if K in visited:
+
+    for index,value in enumerate(visited):
+
+        if value == K:
+
+            print(index)
+
+else:
+
+    print(-1)
