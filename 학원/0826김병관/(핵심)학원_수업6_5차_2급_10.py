@@ -1,3 +1,31 @@
+###.1
+
+def solution(time_table,n):
+
+    dict = {}
+
+    for index, value in enumerate(time_table):
+
+        index = index % n
+
+        dict[index] = dict.get(index,0) + value
+
+    list = dict.values()
+
+    answer = max(list)
+
+    return answer
+
+
+time_table = [4,8,2,5,4,6,7]
+
+n = 4
+
+print(solution(time_table,n))
+
+
+###.sol
+
 def solution(time_table, n):
 
     answer = 0

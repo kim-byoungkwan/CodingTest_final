@@ -1,18 +1,18 @@
 def solution(korean,english):
 
-    answer = 0
     math = 210 - (korean + english)
 
     if math > 100:
 
-        answer = -1
+        return -1
+
     else:
-        answer = math
-    return answer
+
+        return math
 
 
 korean = 70
-english = 60
-ret = solution(korean,english)
-print(ret)
 
+english = 60
+
+print(solution(korean,english))
