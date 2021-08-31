@@ -1,13 +1,23 @@
 def solution(score):
+
     answer = [0] * len(score)
+
     seq = 0
+
     for s in score:
+
         rank = 1
+
         for s2 in score:
+
             if s < s2:
+
                 rank = rank +1
+
         answer[seq] = rank
+
         seq = seq + 1
+
     return answer
 
 

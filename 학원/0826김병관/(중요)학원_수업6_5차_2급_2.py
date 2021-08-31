@@ -1,3 +1,29 @@
+###.1
+
+from collections import deque
+
+time_table = [0,1,0,1,0,0,1,0,1,0,0,0,1,0,0]
+
+def solution(time_table):
+
+    queue = deque(time_table)
+
+    while queue[-1] == 0:
+
+        queue.pop()
+
+    while queue[0] == 0:
+
+        queue.popleft()
+
+    answer = queue.count(0)
+
+    return answer
+
+print(solution(time_table))
+
+###.sol
+
 def func_a(time_table):
 
     answer = 0
@@ -58,3 +84,4 @@ time_table = [1,1,0,0,1,0,1,0,0,0]
 ret = solution(time_table)
 
 print(ret)
+
