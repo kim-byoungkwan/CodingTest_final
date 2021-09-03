@@ -16,16 +16,15 @@ for j in range(1,N+1):
 
     dict[car_out] = dict.get(car_out,[]) + [j]
 
-count = 0
+box = []
 
 for value in dict.values():
 
     if value[0] > value[1]:
 
-        count = count + 1
+        gap = value[0] - value[1]
 
-    else:
+        box.append(gap)
 
-        continue
 
-print(count)
+print(sum(box))
