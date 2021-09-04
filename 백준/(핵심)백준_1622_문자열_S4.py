@@ -20,6 +20,8 @@ while True:
 
                     box.append(k)
 
+                    a.remove(k)
+
         elif length_a == length_b:
 
             for i in b:
@@ -41,6 +43,8 @@ while True:
                 if j in b:
 
                     box.append(j)
+
+                    b.remove(j)
 
         box = ''.join(sorted(box))
 
