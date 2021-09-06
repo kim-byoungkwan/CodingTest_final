@@ -59,6 +59,6 @@ def solution(expr):
 
 
 
-return S.isEmpty()
+    return S.isEmpty()
 
 # 그 어떤 (,[,{ 기호도 pop을 모두 수행했음에도 추가적으로 남아 있으면 안되므로 위의 코드로 reture 값을 출력해야한다.
