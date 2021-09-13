@@ -19,8 +19,6 @@ if queue[0] == max(queue):
 
 
 
-
-
 print(queue)
 
 print(max(queue))
