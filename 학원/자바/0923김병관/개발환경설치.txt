@@ -1,0 +1,16 @@
+1) JDK 설치
+
+  http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+  jdk-8u181-windows-x64.exe
+
+  C:\Java\jdk1.8.0_181\
+  C:\Java\jre1.8.0_181\
+
+2) 이클립스 설치
+
+  http://www.eclipse.org/downloads/
+
+  eclipse-inst-win64.exe
+
+  
