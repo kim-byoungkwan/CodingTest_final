@@ -4,12 +4,13 @@ num_region = sorted(list(map(int,input().split())))
 
 budget = int(input())
 
-
 if sum(num_region) < budget:
 
     print(max(num_region))
 
 else:
+
+    result = 0
 
     start = 0
 
@@ -41,6 +42,14 @@ else:
 
         else:
 
+            result = mid
+
             break
 
-    print(end)
+    if result == 0:
+
+        print(end)
+
+    else:
+
+        print(result)
