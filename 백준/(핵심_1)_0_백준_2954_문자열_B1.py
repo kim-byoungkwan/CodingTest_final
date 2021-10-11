@@ -1,5 +1,27 @@
 ###.2
 
+standard = ['a','e','i','o','u']
+
+word = list(input())
+
+answer = ''
+
+
+for i in range(len(word)):
+
+    if word[i] in standard:
+
+        answer += word[i]
+
+        word[i+1] = ''
+
+        word[i+2] = ''
+
+    else:
+
+        answer += word[i]
+
+print(answer)
 
 
 
