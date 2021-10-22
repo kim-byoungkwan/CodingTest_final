@@ -1,23 +1,17 @@
 ###.2
 
+n = int(input())
 
-import sys
+k = int(input())
 
-stamp = 0
+stamp = n
 
-while stamp // k < k:
+n = n + stamp // k
 
-    n, k = map(int, input().split())
+chicken_plus = stamp // k
 
-    coupon = n
+available = k
 
-    coupon = coupon + n // k
-
-    stamp = n + n // k
-
-    coupon += stamp // k
-
-    print(coupon)
 
 
 

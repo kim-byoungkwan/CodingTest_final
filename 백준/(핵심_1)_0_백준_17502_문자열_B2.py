@@ -1,3 +1,51 @@
+###.2
+
+N = int(input())
+
+word = list(input())
+
+for i in range(len(word)):
+
+    if word[i] == '?' and word[::-1][i] =='?':
+
+        word[i] = 'a'
+
+        word[::-1][i] = 'a'
+
+    else:
+
+        if word[i] !='?':
+
+            word[::-1][i] = word[i]
+
+        else:
+
+            word[i] = word[::-1][i]
+
+print(''.join(word))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
