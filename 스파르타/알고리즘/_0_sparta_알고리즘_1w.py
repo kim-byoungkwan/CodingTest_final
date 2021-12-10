@@ -273,44 +273,158 @@
 
 ##.2
 
-input = "abacabade"
+# input = "abacabade"
+#
+#
+# def find_not_repeating_character(string):
+#
+#     result = [0]*150
+#
+#     answer = []
+#
+#     for i in string:
+#
+#         index = ord(i)
+#
+#         result[index] += 1
+#
+#     for key,value in enumerate(result):
+#
+#         if value == 1:
+#
+#             answer.append(chr(key))
+#
+#         else:
+#
+#             continue
+#
+#     for j in string:
+#
+#         if j in answer:
+#
+#             return j
+#
+#     return '_'
+#
+# result = find_not_repeating_character(input)
+#
+# print(result)
 
 
-def find_not_repeating_character(string):
-
-    result = [0]*150
-
-    answer = []
-
-    for i in string:
-
-        index = ord(i)
-
-        result[index] += 1
-
-    for key,value in enumerate(result):
-
-        if value == 1:
-
-            answer.append(chr(key))
-
-        else:
-
-            continue
-
-    for j in string:
-
-        if j in answer:
-
-            return j
-
-    return '_'
-
-result = find_not_repeating_character(input)
-
-print(result)
+###.11 숙제
 
 
+##.Q1_1
+
+# input = 20
+#
+#
+# def find_prime_list_under_number(number):
+#
+#     prime_list = []
+#
+#     for num in range(2,number+1):
+#
+#         for denominator in range(2,num):
+#
+#             if num % denominator == 0:
+#
+#                 break
+#
+#         else:
+#
+#             prime_list.append(num)
+#
+#     return prime_list
+#
+# answer = find_prime_list_under_number(input)
+#
+# print(answer)
+
+##.Q1_2
+
+# input = 20
+#
+#
+# def find_prime_list_under_number(number):
+#
+#     prime_list = []
+#
+#     for num in range(2,number+1):
+#
+#         for denominator in prime_list:
+#
+#             if num % denominator == 0:
+#
+#                 break
+#
+#         else:
+#
+#             prime_list.append(num)
+#
+#     return prime_list
+#
+# answer = find_prime_list_under_number(input)
+#
+# print(answer)
+
+##.Q1_3
+
+# input = 20
+#
+#
+# def find_prime_list_under_number(number):
+#
+#     prime_list = []
+#
+#     for num in range(2,number+1):
+#
+#         for denominator in prime_list:
+#
+#             if num % denominator == 0 and denominator**2 <= num:
+#
+#                 break
+#
+#         else:
+#
+#             prime_list.append(num)
+#
+#     return prime_list
+#
+# answer = find_prime_list_under_number(input)
+#
+# print(answer)
+
+
+
+
+##.Q2_1
+
+# input = "011110"
+#
+# def find_count_to_turn_out_to_all_zero_or_all_one(string):
+#
+#     result = []
+#
+#     for i in range(1,len(string)):
+#
+#         if string[i-1] != string[i]:
+#
+#             result.append(string[i-1])
+#
+#         if i == len(string)-1:
+#
+#             result.append(string[i])
+#
+#     count_zero = result.count('0')
+#
+#     count_one = result.count('1')
+#
+#     return min(count_zero,count_one)
+#
+# result = find_count_to_turn_out_to_all_zero_or_all_one(input)
+#
+# print(result)
 
 
 
